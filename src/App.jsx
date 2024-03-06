@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import UserList from "./components/UserList";
+import Profile from "./components/Profile";
+import UserState from "./context/User/UserState";
 
 function App() {
-  
   return (
-    <>
-      <h1>Hola mundo</h1>
-    </>
-  )
+    <UserState>
+      <Profile />
+      <UserList />
+    </UserState>
+  );
 }
 
-export default App
+export default App;
